@@ -33,6 +33,7 @@
 <!-- Body main wrapper start -->
 <div class="body-wrapper">
 
+
     <!-- HEADER AREA START (header-5) -->
     <header class="ltn__header-area ltn__header-5 ltn__header-8 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-transparent gradient-color-4---">
         <!-- ltn__header-top-area start -->
@@ -96,7 +97,7 @@
                     <div class="col">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                                <a href="index.html"><img src="{{ asset('/') }}website/assets/img/logo.png" alt="Logo"></a>
+                                <a href="{{ route('home') }}"><img src="{{ asset('/') }}website/assets/img/logo.png" alt="Logo"></a>
                             </div>
                             <div class="get-support clearfix d-none">
                                 <div class="get-support-icon">
@@ -114,33 +115,8 @@
                             <nav>
                                 <div class="ltn__main-menu">
                                     <ul>
-                                        <li class="menu-icon"><a href="#">Home</a>
-                                            <ul class="sub-menu menu-pages-img-show">
-                                                <li>
-                                                    <a href="index.html">Home Style 01</a>
-                                                    <img src="{{ asset('/') }}website/assets/img/home-demos/home-1.jpg" alt="#">
-                                                </li>
-                                                <li>
-                                                    <a href="index-2.html">Home Style 02</a>
-                                                    <img src="{{ asset('/') }}website/assets/img/home-demos/home-2.jpg" alt="#">
-                                                </li>
-                                                <li>
-                                                    <a href="index-3.html">Home Style 03</a>
-                                                    <img src="{{ asset('/') }}website/assets/img/home-demos/home-3.jpg" alt="#">
-                                                </li>
-                                                <li>
-                                                    <a href="index-4.html">Home Style 04</a>
-                                                    <img src="{{ asset('/') }}website/assets/img/home-demos/home-4.jpg" alt="#">
-                                                </li>
-                                                <li>
-                                                    <a href="index-5.html">Home Style 05 <span class="menu-item-badge">video</span></a>
-                                                    <img src="{{ asset('/') }}website/assets/img/home-demos/home-5.jpg" alt="#">
-                                                </li>
-                                                <li>
-                                                    <a href="index-6.html">Home Style 06</a>
-                                                    <img src="{{ asset('/') }}website/assets/img/home-demos/home-1.jpg" alt="#">
-                                                </li>
-                                            </ul>
+                                        <li class="menu-icon"><a href="{{ route('home') }}">Home</a>
+
                                         </li>
                                         <li class="menu-icon"><a href="#">About</a>
                                             <ul>
@@ -158,7 +134,7 @@
                                         </li>
                                         <li class="menu-icon"><a href="#">Enterprise</a>
                                             <ul>
-                                                <li><a href="shop.html">Shop</a></li>
+                                                <li><a href="{{ route('category') }}">Shop</a></li>
                                                 <li><a href="shop-grid.html">Shop Grid</a></li>
                                                 <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
                                                 <li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
@@ -456,6 +432,7 @@
         </div>
     </div>
     <!-- Utilize Mobile Menu End -->
+    <div class="ltn__utilize-overlay"></div>
 
     @yield('body')
     <!-- BRAND LOGO AREA END -->
@@ -724,7 +701,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="modal-product-img">
-                                            <img src="img/product/1.png" alt="#">
+                                            <img src="{{ asset('/') }}website/assets/img/product/1.png" alt="#">
                                         </div>
                                          <div class="modal-product-info">
                                             <h5><a href="product-details.html">Brake Conversion Kit</a></h5>
@@ -738,7 +715,7 @@
                                          <div class="additional-info d-none">
                                             <p>We want to give you <b>10% discount</b> for your first order, <br>  Use discount code at checkout</p>
                                             <div class="payment-method">
-                                                <img src="img/icons/payment.png" alt="#">
+                                                <img src="{{ asset('/') }}website/assets/img/icons/payment.png" alt="#">
                                             </div>
                                          </div>
                                     </div>
@@ -768,7 +745,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="modal-product-img">
-                                            <img src="img/product/7.png" alt="#">
+                                            <img src="{{ asset('/') }}website/assets/img/product/7.png" alt="#">
                                         </div>
                                          <div class="modal-product-info">
                                             <h5><a href="product-details.html">Brake Conversion Kit</a></h5>
@@ -781,7 +758,7 @@
                                          <div class="additional-info d-none">
                                             <p>We want to give you <b>10% discount</b> for your first order, <br>  Use discount code at checkout</p>
                                             <div class="payment-method">
-                                                <img src="img/icons/payment.png" alt="#">
+                                                <img src="{{ asset('/') }}website/assets/img/icons/payment.png" alt="#">
                                             </div>
                                          </div>
                                     </div>
