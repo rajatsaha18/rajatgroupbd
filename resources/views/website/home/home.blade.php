@@ -1,6 +1,7 @@
 @extends('website.master')
 
 @section('title')
+Home
 @endsection
 
 @section('body')

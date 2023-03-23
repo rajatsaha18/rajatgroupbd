@@ -115,26 +115,14 @@
                             <nav>
                                 <div class="ltn__main-menu">
                                     <ul>
-                                        <li class="menu-icon"><a href="{{ route('home') }}">Home</a>
-
+                                        <li><a href="{{ route('home') }}">Home</a>
                                         </li>
-                                        <li class="menu-icon"><a href="#">About</a>
-                                            <ul>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="service.html">Services</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
-                                                <li><a href="portfolio.html">Portfolio</a></li>
-                                                <li><a href="portfolio-2.html">Portfolio - 02</a></li>
-                                                <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                                <li><a href="team.html">Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="locations.html">Google Map Locations</a></li>
-                                            </ul>
+                                        <li><a href="#">About Us</a>
+
                                         </li>
                                         <li class="menu-icon"><a href="#">Enterprise</a>
                                             <ul>
-                                                <li><a href="{{ route('category') }}">Shop</a></li>
+                                                <li><a href="{{ route('category') }}">category</a></li>
                                                 <li><a href="shop-grid.html">Shop Grid</a></li>
                                                 <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
                                                 <li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>

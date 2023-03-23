@@ -86,7 +86,7 @@ Category Page
                         <p>over 1 million+ homes for sale available
                             on the website, we can match you with a
                             house you will want to call home.</p>
-                        <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
+                        <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail') }}">Service Details <i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
             </div>

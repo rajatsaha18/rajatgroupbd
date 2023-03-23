@@ -16,4 +16,8 @@ class HomeController extends Controller
     {
         return view('website.category.category');
     }
+    public function serviceDetail()
+    {
+        return view('website.detail.service-detail');
+    }
 }
