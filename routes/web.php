@@ -15,3 +15,4 @@ use App\Http\Controllers\website\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/category', [HomeController::class, 'category'])->name('category');
