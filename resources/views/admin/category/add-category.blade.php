@@ -10,15 +10,16 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
+                        <h4 class="text-center text-success">{{ Session::get('message') }}</h4>
                         <div class="card-header text-center"><b>Add Category Form</b></div>
                         <div class="card-body">
-                            <form action="" method="post">
+                            <form action="{{ route('new.category') }}" method="post">
                                 @csrf
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">Category Name</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="name" class="form-control"
-                                            value="Enter Category Name" />
+                                            placeholder="Enter Category Name" />
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
@@ -30,7 +31,7 @@
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">Category Image</label>
                                     <div class="col-sm-10 mt-1">
-                                        <input type="file" name="image" class="" />
+                                        <input type="file" name="image" class=""/>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
