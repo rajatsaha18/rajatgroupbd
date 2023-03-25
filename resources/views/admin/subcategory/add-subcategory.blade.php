@@ -18,8 +18,11 @@
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">Category Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="name" class="form-control"
-                                            placeholder="Enter Category Name" />
+                                        <select class="form-control" name="" required>
+                                            <option value="">--Select Category--</option>
+                                            <option value="">one</option>
+                                            <option value="">two</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">

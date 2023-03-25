@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\website\HomeController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\SubCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,6 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::post('/update-category/{id}', [CategoryController::class, 'update'])->name('update.category');
     Route::get('/delete-category/{id}', [CategoryController::class, 'delete'])->name('delete.category');
 
-    Route::get('/add-sub-category', [CategoryController::class, 'index'])->name('add.subcategory');
-    Route::get('/manage-sub-category', [CategoryController::class, 'manage'])->name('manage.subcategory');
+    Route::get('/add-sub-category', [SubCategoryController::class, 'index'])->name('add.subcategory');
+    Route::get('/manage-sub-category', [SubCategoryController::class, 'manage'])->name('manage.subcategory');
 });

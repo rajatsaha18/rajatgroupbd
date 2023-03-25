@@ -841,43 +841,39 @@
                             </div>
                         </li>
 
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
-                                <i class="ri-apps-2-line"></i> <span data-key="t-apps">Content Module</span>
+                            <a class="nav-link menu-link" href="#sidebarLanding" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding">
+                                <i class="ri-rocket-line"></i> <span data-key="t-landing">Content Module</span>
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarApps">
+                            <div class="collapse menu-dropdown" id="sidebarLanding">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="apps-calendar.html" class="nav-link" data-key="t-calendar"> Add Content </a>
+                                        <a href="landing.html" class="nav-link" data-key="t-one-page"> Add Content </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Manage Content </a>
+                                        <a href="nft-landing.html" class="nav-link" data-key="t-nft-landing"> Manage Content </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
-                                <i class="ri-apps-2-line"></i> <span data-key="t-apps">News Module</span>
+                            <a class="nav-link menu-link" href="#sidebarAdvanceUI" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAdvanceUI">
+                                <i class="ri-stack-line"></i> <span data-key="t-advance-ui">News Module</span>
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarApps">
+                            <div class="collapse menu-dropdown" id="sidebarAdvanceUI">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="apps-calendar.html" class="nav-link" data-key="t-calendar"> Add News </a>
+                                        <a href="advance-ui-sweetalerts.html" class="nav-link" data-key="t-sweet-alerts"> Add News </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Manage News </a>
+                                        <a href="advance-ui-nestable.html" class="nav-link" data-key="t-nestable-list">Manage News</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
                          <!-- end Dashboard Menu -->
-
-
-
-
 
                     </ul>
                 </div>
