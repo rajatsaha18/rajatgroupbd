@@ -824,21 +824,24 @@
                                 </ul>
                             </div>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
-                                <i class="ri-apps-2-line"></i> <span data-key="t-apps">SubCategory Module</span>
+                            <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">SubCategory Module</span>
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarApps">
+                            <div class="collapse menu-dropdown" id="sidebarLayouts">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="{{ route('add.subcategory') }}" class="nav-link" data-key="t-calendar"> Add SubCategory </a>
+                                        <a href="{{ route('add.subcategory') }}" target="_blank" class="nav-link" data-key="t-horizontal">Add Sub category</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('manage.subcategory') }}" class="nav-link" data-key="t-chat"> Manage SubCategory </a>
+                                        <a href="{{ route('manage.subcategory') }}" target="_blank" class="nav-link" data-key="t-detached">manage Sub Category</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
+
+
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
                                 <i class="ri-apps-2-line"></i> <span data-key="t-apps">Content Module</span>
