@@ -35,8 +35,8 @@
                                         </td>
                                         <td>{{ $subCategory->status }}</td>
                                         <td>
-                                            <a href="" class="btn btn-success">Edit</a>
-                                            <a href="" class="btn btn-danger" onclick="return confirm('Are you sure delete this..')">Delete</a>
+                                            <a href="{{ route('edit.sub-category',['id' => $subCategory->id])}}" class="btn btn-success">Edit</a>
+                                            <a href="{{ route('delete.sub-category',['id' =>$subCategory->id]) }}" class="btn btn-danger" onclick="return confirm('Are you sure delete this..')">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -35,6 +35,38 @@ class SubCategory extends Model
         self::$subCategory->save();
     }
 
+    public static function updateSubCategory($request, $id)
+    {
+        self::$subCategory = SubCategory::find($id);
+        if($request->file('image'))
+        {
+            if(file_exists(self::$subCategory->image))
+            {
+                unlink(self::$subCategory->image);
+            }
+            self::$imageUrl = self::getImageUrl($request->file('image'));
+        }
+        else{
+            self::$imageUrl = self::$subCategory->image;
+        }
+        self::$subCategory->category_id     = $request->category_id;
+        self::$subCategory->name            = $request->name;
+        self::$subCategory->description     = $request->description;
+        self::$subCategory->image           = self::$imageUrl;
+        self::$subCategory->status          = $request->status;
+        self::$subCategory->save();
+    }
+
+    public static function deleteSubCategory($id)
+    {
+        self::$subCategory = SubCategory::find($id);
+        if(file_exists(self::$subCategory->image))
+        {
+            unlink(self::$subCategory->image);
+        }
+        self::$subCategory->delete();
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);

@@ -11,6 +11,7 @@ class SubCategoryController extends Controller
 {
     private $categories;
     private $subCategories;
+    private $subCategory;
     public function index(){
         $this->categories = Category::all();
         return view('admin.subcategory.add-subcategory', ['categories' => $this->categories]);
@@ -28,5 +29,29 @@ class SubCategoryController extends Controller
     {
         $this->subCategories = SubCategory::all();
         return view('admin.subcategory.manage', ['subCategories' => $this->subCategories]);
+    }
+
+    public function edit($id)
+    {
+        $this->categories = Category::all();
+        $this->subCategory = SubCategory::find($id);
+        return view('admin.subcategory.edit',[
+            'categories' => $this->categories,
+            'subCategory' => $this->subCategory,
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        SubCategory::updateSubCategory($request, $id);
+        return redirect('/manage-sub-category')->with('message', 'Update SubCategory Successfully');
+
+    }
+
+    public function delete($id)
+    {
+        SubCategory::deleteSubCategory($id);
+        return redirect('/manage-sub-category')->with('message', 'Delete SubCategory Successfully');
+
     }
 }
