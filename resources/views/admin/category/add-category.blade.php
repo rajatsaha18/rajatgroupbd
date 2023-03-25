@@ -37,7 +37,7 @@
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-10 mt-3">
-                                        <label class="mx-2"><input type="radio" name="status" value="1"/> Published</label>
+                                        <label class="mx-2"><input type="radio" name="status" value="1" checked/> Published</label>
                                         <label><input type="radio" name="status" value="0"/> UnPublished</label>
                                     </div>
                                 </div>
