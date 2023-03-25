@@ -25,13 +25,14 @@
                                             @endforeach
 
                                         </select>
+                                        <span class="text-danger">{{ $errors->has('category_id') ? $errors->first('category_id') : ''}}</span>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">SubCategory Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="name" class="form-control"
-                                            placeholder="Enter SubCategory Name" />
+                                        <input type="text" name="name" class="form-control" placeholder="Enter SubCategory Name" />
+                                        <span class="text-danger">{{ $errors->has('name') ? $errors->first('name') : ''}}</span>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">

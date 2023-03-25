@@ -19,7 +19,7 @@
                                     <label class="col-sm-2 col-form-label">Category Name</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="name" value="{{ $category->name }}" class="form-control"
-                                            placeholder="Enter Category Name" />
+                                            placeholder="Enter Category Name"/>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
@@ -38,8 +38,8 @@
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-10 mt-3">
-                                        <label class="mx-2"><input type="radio" {{ $category->status == 1 ? 'checked' : '';}} name="status" value="1"/> Published</label>
-                                        <label><input type="radio" name="status" {{ $category->status == 0 ? 'checked' : '';}} value="0"/> UnPublished</label>
+                                        <label class="mx-2"><input type="radio" {{ $category->status == 1 ? 'checked' : ''}} name="status" value="1"/> Published</label>
+                                        <label><input type="radio" name="status" {{ $category->status == 0 ? 'checked' : ''}} value="0"/> UnPublished</label>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
