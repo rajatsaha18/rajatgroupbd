@@ -130,27 +130,52 @@ Home
     <!-- ABOUT US AREA END -->
 
     <!-- ABOUT US AREA START -->
-    <div class="ltn__about-us-area section-bg-1 bg-image pt-120 pb-90" data-bg="img/bg/31.jpg">
+    <div class="ltn__feature-area section-bg-1 pt-120 pb-90">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <div class="about-us-info-wrap mb-50">
-                        <div class="section-title-area ltn__section-title-2">
-                            <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Construction Service</h6>
-                            <h1 class="section-title">Provide Construction
-                                Service For You</h1>
-                            <p>Construction is a general term meaning the art and science to form objects
-                                systems organizations, and comes from Latin</p>
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2 text-center">
+                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Our Services</h6>
+                        <h1 class="section-title">Construction Solution</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-self-center">
+                @foreach ($categories as $category)
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
+                        <div class="ltn__feature-icon">
+                            <img src="{{ asset($category->image) }}" alt="" class="w-100" height="150" width="150"/>
                         </div>
-                        <p>Construction is a general term meaning the art and science to form objects systems
-                            organizations, and comes from Latin construction and Old French construction. To
-                            construct is the verb: the act of building, and the noun</p>
-                        <div class="btn-wrapper">
-                            <a class="btn theme-btn-1 btn-effect-1" href="service.html">View Service</a>
+                        <div class="ltn__feature-info">
+                            <h3><a href="service-details.html">{{ $category->name }}</a></h3>
+                            <p>over 1 million+ homes for sale available
+                                on the website, we can match you with a
+                                house you will want to call home.</p>
+                            <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail') }}">Service Details <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 align-self-center">
+                @endforeach
+
+            </div>
+        </div>
+    </div>
+    {{-- <div class="ltn__about-us-area section-bg-1 bg-image pt-120 pb-90" data-bg="img/bg/31.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="about-us-info-wrap mb-50 align-self-center">
+                    <div class="section-title-area ltn__section-title-2">
+                        <h6 class="section-subtitle ltn__secondary-color text-center"><span><i class="fas fa-square-full"></i></span> Construction Service</h6>
+                        <h3 class="section-title text-center">
+                        </h3>
+
+                </div>
+                <div class="align-self-center">
+                    <h6 class="text-center text-warning"><span><i class="fas fa-square-full"></i></span>Service</h6>
+                    <h3 class="text-center">Provide Construction Service</h3>
+                </div>
+                <div class="col-lg-12 align-self-center">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
@@ -164,47 +189,11 @@ Home
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                                <div class="ltn__feature-icon">
-                                    <span><i class="flaticon-slider"></i></span>
-                                </div>
-                                <div class="ltn__feature-info">
-                                    <h3><a href="service-details.html">Power & Energy</a></h3>
-                                    <p>Construction is a general term the art and science to form </p>
-                                    <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                                <div class="ltn__feature-icon">
-                                    <span><i class="flaticon-building"></i></span>
-                                </div>
-                                <div class="ltn__feature-info">
-                                    <h3><a href="service-details.html">Petroleum Refinery</a></h3>
-                                    <p>Construction is a general term the art and science to form </p>
-                                    <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                                <div class="ltn__feature-icon">
-                                    <span><i class="flaticon-house"></i></span>
-                                </div>
-                                <div class="ltn__feature-info">
-                                    <h3><a href="service-details.html">Interior Design</a></h3>
-                                    <p>Construction is a general term the art and science to form </p>
-                                    <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- ABOUT US AREA END -->
 
     <!-- IMAGE SLIDER AREA START (img-slider-3) ( Product Section) -->

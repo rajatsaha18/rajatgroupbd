@@ -12,16 +12,13 @@ class HomeController extends Controller
     private $category;
     public function index()
     {
-        $this->categories = Category::all();
-        return view('website.home.home',['categories' => $this->categories]);
+        return view('website.home.home');
     }
 
     public function category($id)
     {
         $this->category = Category::find($id);
-        $this->categories = Category::all();
         return view('website.category.category',[
-            'categories' => $this->categories,
             'category' => $this->category,
         ]);
     }
