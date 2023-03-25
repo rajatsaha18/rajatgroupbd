@@ -11,11 +11,11 @@ Category Page
         <div class="row">
             <div class="col-lg-12">
                 <div class="ltn__breadcrumb-inner">
-                    <h1 class="page-title mt-5">Our Services</h1>
+                    <h1 class="page-title mt-5">{{ $category->name }}</h1>
                     <div class="ltn__breadcrumb-list">
                         <ul>
                             <li><a href="{{ route('home') }}"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
-                            <li>Service</li>
+                            <li>{{ $category->name }}</li>
                         </ul>
                     </div>
                 </div>
@@ -76,13 +76,14 @@ Category Page
             </div>
         </div>
         <div class="row align-self-center">
+            @foreach ($categories as $category)
             <div class="col-lg-4 col-sm-6">
                 <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
                     <div class="ltn__feature-icon">
-                        <span><i class="flaticon-apartment"></i></span>
+                        <img src="{{ asset($category->image) }}" alt="" class="w-100" height="150" width="150"/>
                     </div>
                     <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">Industrial construction</a></h3>
+                        <h3><a href="service-details.html">{{ $category->name }}</a></h3>
                         <p>over 1 million+ homes for sale available
                             on the website, we can match you with a
                             house you will want to call home.</p>
@@ -90,76 +91,8 @@ Category Page
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                    <div class="ltn__feature-icon">
-                        <span><i class="flaticon-excavator"></i></span>
-                    </div>
-                    <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">Oil Gas & Power Plant</a></h3>
-                        <p>over 1 million+ homes for sale available
-                            on the website, we can match you with a
-                            house you will want to call home.</p>
-                        <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                    <div class="ltn__feature-icon">
-                        <span><i class="icon-repair"></i></span>
-                    </div>
-                    <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">Mechanical Works</a></h3>
-                        <p>over 1 million+ homes for sale available
-                            on the website, we can match you with a
-                            house you will want to call home.</p>
-                        <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                    <div class="ltn__feature-icon">
-                        <span><i class="flaticon-slider"></i></span>
-                    </div>
-                    <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">Power & Energy</a></h3>
-                        <p>over 1 million+ homes for sale available
-                            on the website, we can match you with a
-                            house you will want to call home.</p>
-                        <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                    <div class="ltn__feature-icon">
-                        <span><i class="flaticon-building"></i></span>
-                    </div>
-                    <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">Petroleum Refinery</a></h3>
-                        <p>over 1 million+ homes for sale available
-                            on the website, we can match you with a
-                            house you will want to call home.</p>
-                        <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                    <div class="ltn__feature-icon">
-                        <span><i class="flaticon-house"></i></span>
-                    </div>
-                    <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">Interior Design</a></h3>
-                        <p>over 1 million+ homes for sale available
-                            on the website, we can match you with a
-                            house you will want to call home.</p>
-                        <a class="ltn__service-btn ltn__service-btn-2" href="service-details.html">Service Details <i class="flaticon-right-arrow"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </div>

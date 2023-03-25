@@ -18,7 +18,7 @@ use App\Http\Controllers\admin\SubCategoryController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/category', [HomeController::class, 'category'])->name('category');
+Route::get('/category/{id}', [HomeController::class, 'category'])->name('category');
 Route::get('/service-detail', [HomeController::class, 'serviceDetail'])->name('detail');
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
