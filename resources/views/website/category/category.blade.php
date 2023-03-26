@@ -6,7 +6,7 @@ Category Page
 
 @section('body')
 
-<div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bg="{{ asset('/') }}website/assets/img/bg/14.jpg">
+<div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bg="{{ asset($category->image) }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -76,14 +76,14 @@ Category Page
             </div>
         </div>
         <div class="row align-self-center">
-            @foreach ($categories as $category)
+            @foreach ($contents as $content)
             <div class="col-lg-4 col-sm-6">
                 <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
                     <div class="ltn__feature-icon">
-                        <img src="{{ asset($category->image) }}" alt="" class="w-100" height="150" width="150"/>
+                        <img src="{{ asset($content->image) }}" alt="" class="w-100" height="150" width="150"/>
                     </div>
                     <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">{{ $category->name }}</a></h3>
+                        <h3><a href="service-details.html">{{ $content->name }}</a></h3>
                         <p>over 1 million+ homes for sale available
                             on the website, we can match you with a
                             house you will want to call home.</p>
@@ -145,7 +145,7 @@ Category Page
             <div class="col-lg-12">
                 <div class="ltn__blog-item ltn__blog-item-3">
                     <div class="ltn__blog-img">
-                        <a href="blog-details.html"><img src="img/blog/2.jpg" alt="#"></a>
+                        <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/2.jpg" alt="#"></a>
                     </div>
                     <div class="ltn__blog-brief">
                         <div class="ltn__blog-meta">

@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="{{ asset('/') }}website/assets/css/style.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('/') }}website/assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -106,8 +108,7 @@
                         <div class="col">
                             <div class="site-logo-wrap">
                                 <div class="site-logo">
-                                    <a href="{{ route('home') }}"><img
-                                            src="{{ asset('/') }}website/assets/img/logo.png" alt="Logo"></a>
+                                    <a href="{{ route('home') }}" class="text-warning"><i class="fa-solid fa-house"></i>RajatGroupBd</a>
                                 </div>
                                 <div class="get-support clearfix d-none">
                                     <div class="get-support-icon">
@@ -135,7 +136,6 @@
                                                     @foreach ($categories as $category)
                                                         <li><a href="{{ route('category',['id' => $category->id]) }}">{{ $category->name }}</a></li>
                                                     @endforeach
-
 
                                                 </ul>
                                             </li>

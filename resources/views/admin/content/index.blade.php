@@ -44,7 +44,7 @@
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">Content Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="name" class="form-control" placeholder="Enter SubCategory Name" />
+                                        <input type="text" name="name" class="form-control" placeholder="Enter Content Name" />
                                         <span class="text-danger">{{ $errors->has('name') ? $errors->first('name') : ''}}</span>
                                     </div>
                                 </div>
