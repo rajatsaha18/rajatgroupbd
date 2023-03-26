@@ -5,6 +5,7 @@ use App\Http\Controllers\website\HomeController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\SubCategoryController;
+use App\Http\Controllers\admin\ContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,8 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::get('/edit-sub-category/{id}', [SubCategoryController::class, 'edit'])->name('edit.sub-category');
     Route::post('/update-sub-category/{id}', [SubCategoryController::class, 'update'])->name('update.subcategory');
     Route::get('/delete-sub-category/{id}', [SubCategoryController::class, 'delete'])->name('delete.sub-category');
+
+    Route::get('/add-content', [ContentController::class, 'index'])->name('add.content');
+    Route::post('/new-content', [ContentController::class, 'create'])->name('new.content');
+    Route::get('/manage-content', [ContentController::class, 'manage'])->name('manage.content');
 });

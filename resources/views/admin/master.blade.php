@@ -1036,11 +1036,11 @@
                             <div class="collapse menu-dropdown" id="sidebarLanding">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="landing.html" class="nav-link" data-key="t-one-page"> Add Content
+                                        <a href="{{ route('add.content') }}" class="nav-link" data-key="t-one-page"> Add Content
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="nft-landing.html" class="nav-link" data-key="t-nft-landing"> Manage
+                                        <a href="{{ route('manage.content') }}" class="nav-link" data-key="t-nft-landing"> Manage
                                             Content </a>
                                     </li>
                                 </ul>
