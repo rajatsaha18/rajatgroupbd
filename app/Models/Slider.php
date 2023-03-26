@@ -51,4 +51,13 @@ class Slider extends Model
         self::$slider->image = self::$imageUrl;
         self::$slider->save();
     }
+
+    public static function deleteSlider($id)
+    {
+        self::$slider = Slider::find($id);
+        if(file_exists(self::$slider->image))
+        {
+            unlink(self::$slider->image);
+        }
+    }
 }

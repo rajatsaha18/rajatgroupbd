@@ -39,4 +39,9 @@ class SliderController extends Controller
         Slider::updateSlider($request, $id);
         return redirect('/manage-slider')->with('message', 'Update Slider Successfully');
     }
+    public function delete($id)
+    {
+        Slider::deleteSlider( $id);
+        return redirect('/manage-slider')->with('message', 'Update Slider Successfully');
+    }
 }
