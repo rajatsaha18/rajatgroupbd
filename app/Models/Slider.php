@@ -32,4 +32,23 @@ class Slider extends Model
         self::$slider->image = self::getImageUrl($request->file('image'));
         self::$slider->save();
     }
+
+    public static function updateSlider($request, $id)
+    {
+        self::$slider = Slider::find($id);
+        if($request->file('image'))
+        {
+            if(file_exists(self::$slider->image))
+            {
+                unlink(self::$slider->image);
+            }
+            self::$imageUrl = self::getImageUrl($request->file('image'));
+        }
+        else{
+            self::$imageUrl = self::$slider->image;
+        }
+        self::$slider->name  = $request->name;
+        self::$slider->image = self::$imageUrl;
+        self::$slider->save();
+    }
 }
