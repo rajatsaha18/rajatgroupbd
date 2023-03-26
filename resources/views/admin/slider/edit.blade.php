@@ -13,7 +13,7 @@
                         <h4 class="text-center text-success">{{ Session::get('message') }}</h4>
                         <div class="card-header text-center"><b>Edit Slider Form</b></div>
                         <div class="card-body">
-                            <form action="{{ route('new.slider') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('update.slider',['id' => $slider->id]) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">Slider Name</label>

@@ -49,4 +49,5 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::post('/new-slider', [SliderController::class, 'create'])->name('new.slider');
     Route::get('/manage-slider', [SliderController::class, 'manage'])->name('manage.slider');
     Route::get('/edit-slider/{id}', [SliderController::class, 'edit'])->name('edit.slider');
+    Route::get('/update-slider/{id}', [SliderController::class, 'update'])->name('update.slider');
 });
