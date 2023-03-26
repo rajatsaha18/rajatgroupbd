@@ -32,7 +32,6 @@
     <link href="{{ asset('/') }}admin/assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('/') }}admin/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 </head>
 
@@ -1051,17 +1050,17 @@
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarAdvanceUI" data-bs-toggle="collapse"
                                 role="button" aria-expanded="false" aria-controls="sidebarAdvanceUI">
-                                <i class="ri-stack-line"></i> <span data-key="t-advance-ui">News Module</span>
+                                <i class="ri-stack-line"></i> <span data-key="t-advance-ui">Slider Module</span>
                             </a>
                             <div class="collapse menu-dropdown" id="sidebarAdvanceUI">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="advance-ui-sweetalerts.html" class="nav-link"
-                                            data-key="t-sweet-alerts"> Add News </a>
+                                        <a href="{{ route('index.slider') }}" class="nav-link"
+                                            data-key="t-sweet-alerts"> Add Slider </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="advance-ui-nestable.html" class="nav-link"
-                                            data-key="t-nestable-list">Manage News</a>
+                                        <a href="{{ route('manage.slider') }}" class="nav-link"
+                                            data-key="t-nestable-list">Manage Slider</a>
                                     </li>
                                 </ul>
                             </div>
