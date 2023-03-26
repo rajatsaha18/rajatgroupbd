@@ -31,7 +31,7 @@
                                             <img src="{{ asset($slider->image) }}" alt="" height="60" width="60"/>
                                         </td>
                                         <td>
-                                            <a href="{{ route('edit.slider') }}" class="btn btn-success">Edit</a>
+                                            <a href="{{ route('edit.slider',['id' => $slider->id]) }}" class="btn btn-success">Edit</a>
                                             <a href="" class="btn btn-danger" onclick="return confirm('Are you sure delete this..')">Delete</a>
                                         </td>
                                     </tr>

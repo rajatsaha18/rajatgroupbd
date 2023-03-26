@@ -27,4 +27,10 @@ class SliderController extends Controller
         $this->sliders = Slider::all();
         return view('admin.slider.manage',['sliders' => $this->sliders]);
     }
+
+    public function edit($id)
+    {
+        $this->slider = Slider::find($id);
+        return view('admin.slider.edit',['slider' => $this->slider]);
+    }
 }
