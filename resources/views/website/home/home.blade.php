@@ -1,56 +1,35 @@
 @extends('website.master')
 
 @section('title')
-Home
+    Home
 @endsection
 
 @section('body')
-
     <!-- SLIDER AREA START (slider-3) -->
     <div class="ltn__slider-area ltn__slider-3  section-bg-2---">
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---" data-bg="{{ asset('/') }}website/assets/img/slider/71.jpg">
-                <div class="ltn__slide-item-inner  text-left">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 align-self-center">
-                                <div class="slide-item-info">
-                                    <div class="slide-item-info-inner ltn__slide-animation">
-                                        <h6 class="slide-sub-title ltn__secondary-color animated text-uppercase"><span><i class="fas fa-square-full"></i></span> Great Experience In Building</h6>
-                                        <h1 class="slide-title animated ">Highest Standards <br> Of Construction</h1>
-                                        <div class="slide-brief animated">
-                                            <p>All types of work – from designing and laying the Foundation
-                                                finishing and commissioning. Tight deadlines, reasonable.</p>
-                                        </div>
-                                        <div class="btn-wrapper animated">
-                                            <a href="contact.html" class="theme-btn-1 btn btn-effect-1">Get A Quate</a>
-                                            <a href="about.html" class="theme-btn-2 btn btn-effect-2">Learn More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---" data-bg="{{ asset('/') }}website/assets/img/slider/74.jpg">
-                <div class="ltn__slide-item-inner  text-right">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 align-self-center">
-                                <div class="slide-item-info">
-                                    <div class="slide-item-info-inner ltn__slide-animation">
-                                        <h6 class="slide-sub-title ltn__secondary-color animated text-uppercase"><span><i class="fas fa-square-full"></i></span> Great Experience In Building</h6>
-                                        <h1 class="slide-title animated ">Highest Standards <br> Of Construction</h1>
-                                        <div class="slide-brief animated">
-                                            <p>All types of work – from designing and laying the Foundation
-                                                finishing and commissioning. Tight deadlines, reasonable.</p>
-                                        </div>
-                                        <div class="btn-wrapper animated">
-                                            <a href="contact.html" class="theme-btn-1 btn btn-effect-1">Get A Quate</a>
-                                            <a href="about.html" class="theme-btn-2 btn btn-effect-2">Learn More</a>
+            @foreach ($sliders as $slider)
+                <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---"
+                    data-bg="{{ asset($slider->image) }}">
+                    <div class="ltn__slide-item-inner  text-left">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 align-self-center">
+                                    <div class="slide-item-info">
+                                        <div class="slide-item-info-inner ltn__slide-animation">
+                                            <h6 class="slide-sub-title ltn__secondary-color animated text-uppercase">
+                                                <span><i class="fas fa-square-full"></i></span> Great Experience In Building
+                                            </h6>
+                                            <h1 class="slide-title animated ">Highest Standards <br> Of Construction</h1>
+                                            <div class="slide-brief animated">
+                                                <p>All types of work – from designing and laying the Foundation
+                                                    finishing and commissioning. Tight deadlines, reasonable.</p>
+                                            </div>
+                                            <div class="btn-wrapper animated">
+                                                <a href="contact.html" class="theme-btn-1 btn btn-effect-1">Get A Quate</a>
+                                                <a href="about.html" class="theme-btn-2 btn btn-effect-2">Learn More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -58,32 +37,8 @@ Home
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---" data-bg="{{ asset('/') }}website/assets/img/slider/71.jpg">
-                <div class="ltn__slide-item-inner  text-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 align-self-center">
-                                <div class="slide-item-info">
-                                    <div class="slide-item-info-inner ltn__slide-animation">
-                                        <h6 class="slide-sub-title ltn__secondary-color animated text-uppercase"><span><i class="fas fa-square-full"></i></span> Great Experience In Building</h6>
-                                        <h1 class="slide-title animated ">Highest Standards <br> Of Construction</h1>
-                                        <div class="slide-brief animated">
-                                            <p>All types of work – from designing and laying the Foundation
-                                                finishing and commissioning. Tight deadlines, reasonable.</p>
-                                        </div>
-                                        <div class="btn-wrapper animated">
-                                            <a href="contact.html" class="theme-btn-1 btn btn-effect-1">Get A Quate</a>
-                                            <a href="about.html" class="theme-btn-2 btn btn-effect-2">Learn More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
             <!--  -->
         </div>
     </div>
@@ -101,7 +56,8 @@ Home
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2">
-                            <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Great Experience In Building</h6>
+                            <h6 class="section-subtitle ltn__secondary-color"><span><i
+                                        class="fas fa-square-full"></i></span> Great Experience In Building</h6>
                             <h1 class="section-title">Solutions For Residentials
                                 & Industries!</h1>
                             <p>Construction is a general term meaning the art and science to form objects
@@ -113,13 +69,14 @@ Home
                         <div class="about-author-info d-flex">
                             <div class="author-name-designation  align-self-center mr-30">
                                 <!-- <h4 class="mb-0">Jerry Henson</h4>
-                                <small>/ Shop Director</small> -->
+                                    <small>/ Shop Director</small> -->
                                 <div class="btn-wrapper">
                                     <a class="btn theme-btn-2 btn-effect-1" href="about.html">About Us</a>
                                 </div>
                             </div>
                             <div class="author-sign  align-self-center mt-40">
-                                <img src="{{ asset('/') }}website/assets/img/icons/icon-img/author-sign.png" alt="#">
+                                <img src="{{ asset('/') }}website/assets/img/icons/icon-img/author-sign.png"
+                                    alt="#">
                             </div>
                         </div>
                     </div>
@@ -135,27 +92,30 @@ Home
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Our Services</h6>
+                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span>
+                            Our Services</h6>
                         <h1 class="section-title">Construction Solution</h1>
                     </div>
                 </div>
             </div>
             <div class="row align-self-center">
                 @foreach ($categories as $category)
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
-                        <div class="ltn__feature-icon">
-                            <img src="{{ asset($category->image) }}" alt="" class="w-100" height="150" width="150"/>
-                        </div>
-                        <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">{{ $category->name }}</a></h3>
-                            <p>over 1 million+ homes for sale available
-                                on the website, we can match you with a
-                                house you will want to call home.</p>
-                            <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail') }}">Service Details <i class="flaticon-right-arrow"></i></a>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__feature-item ltn__feature-item-6 box-shadow-1">
+                            <div class="ltn__feature-icon">
+                                <img src="{{ asset($category->image) }}" alt="" class="w-100" height="150"
+                                    width="150" />
+                            </div>
+                            <div class="ltn__feature-info">
+                                <h3><a href="">{{ $category->name }}</a></h3>
+                                <p>over 1 million+ homes for sale available
+                                    on the website, we can match you with a
+                                    house you will want to call home.</p>
+                                <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail') }}">Service Details
+                                    <i class="flaticon-right-arrow"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
 
             </div>
@@ -202,7 +162,8 @@ Home
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Construction Projects</h6>
+                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span>
+                            Construction Projects</h6>
                         <h1 class="section-title">Our Recent Projects</h1>
                     </div>
                 </div>
@@ -219,7 +180,8 @@ Home
                                 <h1><a href="portfolio-details.html">Contemporary Vilas</a></h1>
                             </div>
                             <div class="btn-wrapper">
-                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View Properties<i class="flaticon-right-arrow"></i></a>
+                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View
+                                    Properties<i class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -235,7 +197,8 @@ Home
                                 <h1><a href="portfolio-details.html">Empire State Building</a></h1>
                             </div>
                             <div class="btn-wrapper">
-                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View Properties<i class="flaticon-right-arrow"></i></a>
+                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View
+                                    Properties<i class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -251,7 +214,8 @@ Home
                                 <h1><a href="portfolio-details.html">Central park Tower</a></h1>
                             </div>
                             <div class="btn-wrapper">
-                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View Properties<i class="flaticon-right-arrow"></i></a>
+                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View
+                                    Properties<i class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -267,7 +231,8 @@ Home
                                 <h1><a href="portfolio-details.html">Contemporary Vilas</a></h1>
                             </div>
                             <div class="btn-wrapper">
-                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View Properties<i class="flaticon-right-arrow"></i></a>
+                                <a href="portfolio-details.html" class="btn-- theme-btn-1-- btn-effect-1--">View
+                                    Properties<i class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -284,7 +249,9 @@ Home
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2 mb-20">
-                            <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full ltn__secondary-color"></i></span> Great Experience In Building</h6>
+                            <h6 class="section-subtitle ltn__secondary-color"><span><i
+                                        class="fas fa-square-full ltn__secondary-color"></i></span> Great Experience In
+                                Building</h6>
                             <h1 class="section-title">Our Specialization &
                                 Company Features</h1>
                         </div>
@@ -315,7 +282,9 @@ Home
                             </li>
                         </ul>
                         <div class="  ltn__animation-pulse2 text-center mt-30">
-                            <a class="ltn__video-play-btn bg-white--- ltn__secondary-bg" href="https://www.youtube.com/embed/HnbMYzdjuBs?autoplay=1&amp;showinfo=0" data-rel="lightcase">
+                            <a class="ltn__video-play-btn bg-white--- ltn__secondary-bg"
+                                href="https://www.youtube.com/embed/HnbMYzdjuBs?autoplay=1&amp;showinfo=0"
+                                data-rel="lightcase">
                                 <i class="icon-play  ltn__secondary-color--- white-color"></i>
                             </a>
                         </div>
@@ -337,7 +306,8 @@ Home
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Our Expert Worker</h6>
+                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span>
+                            Our Expert Worker</h6>
                         <h1 class="section-title">Our Expert Worker</h1>
                     </div>
                 </div>
@@ -403,14 +373,16 @@ Home
     <!-- TEAM AREA END -->
 
     <!-- FEATURE AREA START ( Feature - 6) -->
-    <div class="ltn__feature-area bg-image-top pt-120 pb-35---" data-bg="{{ asset('/') }}website/assets/img/bg/32.jpg">
+    <div class="ltn__feature-area bg-image-top pt-120 pb-35---"
+        data-bg="{{ asset('/') }}website/assets/img/bg/32.jpg">
         <div class="container">
             <div class="row bg-white pt-75 plr--5">
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title-area ltn__section-title-2 text-center">
-                                <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Working Process</h6>
+                                <h6 class="section-subtitle ltn__secondary-color"><span><i
+                                            class="fas fa-square-full"></i></span> Working Process</h6>
                                 <h1 class="section-title">How We Work</h1>
                             </div>
                         </div>
@@ -558,7 +530,8 @@ Home
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> Client,s Feedback</h6>
+                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span>
+                            Client,s Feedback</h6>
                         <h1 class="section-title">Client,s Feedback</h1>
                     </div>
                 </div>
@@ -659,7 +632,8 @@ Home
     <!-- TESTIMONIAL AREA END -->
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
-    <div class="ltn__call-to-action-area call-to-action-6 before-bg-left-skew ltn__secondary-bg bg-image pt-110 pb-110" data-bg="img/bg/33.jpg">
+    <div class="ltn__call-to-action-area call-to-action-6 before-bg-left-skew ltn__secondary-bg bg-image pt-110 pb-110"
+        data-bg="img/bg/33.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -670,7 +644,8 @@ Home
                             <p>We are always Ready To Help You</p>
                         </div>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-4 btn-white font-weight-bold" href="contact.html">Shedule Work <i class="icon-next"></i></a>
+                            <a class="btn btn-effect-4 btn-white font-weight-bold" href="contact.html">Shedule Work <i
+                                    class="icon-next"></i></a>
                         </div>
                     </div>
                 </div>
@@ -685,7 +660,8 @@ Home
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span> News & Blogs</h6>
+                        <h6 class="section-subtitle ltn__secondary-color"><span><i class="fas fa-square-full"></i></span>
+                            News & Blogs</h6>
                         <h1 class="section-title">See Our Leatest News <br> & Read Blogs</h1>
                     </div>
                 </div>
@@ -695,7 +671,8 @@ Home
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/1.jpg" alt="#"></a>
+                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/1.jpg"
+                                    alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -708,7 +685,8 @@ Home
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">10 Brilliant Ways To Decorate Your Home</a></h3>
+                            <h3 class="ltn__blog-title"><a href="blog-details.html">10 Brilliant Ways To Decorate Your
+                                    Home</a></h3>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
                                     <ul>
@@ -726,7 +704,8 @@ Home
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/2.jpg" alt="#"></a>
+                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/2.jpg"
+                                    alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -739,7 +718,8 @@ Home
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">The Most Inspiring Interior Design Of 2021</a></h3>
+                            <h3 class="ltn__blog-title"><a href="blog-details.html">The Most Inspiring Interior Design Of
+                                    2021</a></h3>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
                                     <ul>
@@ -757,7 +737,8 @@ Home
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/3.jpg" alt="#"></a>
+                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/3.jpg"
+                                    alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -770,7 +751,8 @@ Home
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">Recent Commercial Real Estate Transactions</a></h3>
+                            <h3 class="ltn__blog-title"><a href="blog-details.html">Recent Commercial Real Estate
+                                    Transactions</a></h3>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
                                     <ul>
@@ -788,7 +770,8 @@ Home
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/4.jpg" alt="#"></a>
+                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/4.jpg"
+                                    alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -801,7 +784,8 @@ Home
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">Renovating a Living Room? Experts Share Their Secrets</a></h3>
+                            <h3 class="ltn__blog-title"><a href="blog-details.html">Renovating a Living Room? Experts
+                                    Share Their Secrets</a></h3>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
                                     <ul>
@@ -819,7 +803,8 @@ Home
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/5.jpg" alt="#"></a>
+                            <a href="blog-details.html"><img src="{{ asset('/') }}website/assets/img/blog/5.jpg"
+                                    alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -832,7 +817,8 @@ Home
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">7 home trends that will shape your house in 2021</a></h3>
+                            <h3 class="ltn__blog-title"><a href="blog-details.html">7 home trends that will shape your
+                                    house in 2021</a></h3>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
                                     <ul>

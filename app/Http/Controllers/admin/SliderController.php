@@ -25,6 +25,6 @@ class SliderController extends Controller
     public function manage()
     {
         $this->sliders = Slider::all();
-        return view('admin.slider.manage',compact($this->sliders));
+        return view('admin.slider.manage',['sliders' => $this->sliders]);
     }
 }

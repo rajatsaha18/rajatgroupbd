@@ -5,6 +5,7 @@ namespace App\Http\Controllers\website;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Content;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,9 +13,11 @@ class HomeController extends Controller
     private $categories;
     private $category;
     private $contents;
+    private $sliders;
     public function index()
     {
-        return view('website.home.home');
+        $this->sliders = Slider::all();
+        return view('website.home.home', ['sliders' => $this->sliders]);
     }
 
     public function category($id)
