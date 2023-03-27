@@ -71,7 +71,7 @@
                                 <!-- <h4 class="mb-0">Jerry Henson</h4>
                                     <small>/ Shop Director</small> -->
                                 <div class="btn-wrapper">
-                                    <a class="btn theme-btn-2 btn-effect-1" href="about.html">About Us</a>
+                                    <a class="btn theme-btn-2 btn-effect-1" href="{{ route('about.us') }}">About Us</a>
                                 </div>
                             </div>
                             <div class="author-sign  align-self-center mt-40">
