@@ -13,6 +13,7 @@ class HomeController extends Controller
     private $categories;
     private $category;
     private $contents;
+    private $content;
     private $sliders;
     public function index()
     {
@@ -29,8 +30,13 @@ class HomeController extends Controller
             'contents' => $this->contents,
         ]);
     }
-    public function serviceDetail()
+    public function serviceDetail($id)
     {
-        return view('website.detail.service-detail');
+        $this->content = Content::find($id);
+        return view('website.detail.service-detail', ['content' => $this->content]);
+    }
+    public function aboutUs()
+    {
+        return view('website.about.about-us');
     }
 }

@@ -128,7 +128,7 @@
                                         <ul>
                                             <li><a href="{{ route('home') }}">Home</a>
                                             </li>
-                                            <li><a href="#">About Us</a>
+                                            <li><a href="{{ route('about.us') }}">About Us</a>
 
                                             </li>
                                             <li class="menu-icon"><a href="#">Enterprise</a>

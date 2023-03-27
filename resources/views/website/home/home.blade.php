@@ -107,11 +107,11 @@
                                     width="150" />
                             </div>
                             <div class="ltn__feature-info">
-                                <h3><a href="">{{ $category->name }}</a></h3>
+                                <h3><a href="{{ route('category',['id' => $category->id]) }}">{{ $category->name }}</a></h3>
                                 <p>over 1 million+ homes for sale available
                                     on the website, we can match you with a
                                     house you will want to call home.</p>
-                                <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail') }}">Service Details
+                                <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail',['id' => $category->id]) }}">Service Details
                                     <i class="flaticon-right-arrow"></i></a>
                             </div>
                         </div>

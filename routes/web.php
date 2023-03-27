@@ -21,7 +21,8 @@ use App\Http\Controllers\admin\SliderController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/category/{id}', [HomeController::class, 'category'])->name('category');
-Route::get('/service-detail', [HomeController::class, 'serviceDetail'])->name('detail');
+Route::get('/service-detail/{id}', [HomeController::class, 'serviceDetail'])->name('detail');
+Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about.us');
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

@@ -83,11 +83,11 @@ Category Page
                         <img src="{{ asset($content->image) }}" alt="" class="w-100" height="150" width="150"/>
                     </div>
                     <div class="ltn__feature-info">
-                        <h3><a href="service-details.html">{{ $content->name }}</a></h3>
+                        <h3><a href="{{ route('detail',['id' => $content->id]) }}">{{ $content->name }}</a></h3>
                         <p>over 1 million+ homes for sale available
                             on the website, we can match you with a
                             house you will want to call home.</p>
-                        <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail') }}">Service Details <i class="flaticon-right-arrow"></i></a>
+                        <a class="ltn__service-btn ltn__service-btn-2" href="{{ route('detail',['id' => $content->id]) }}">Service Details <i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
             </div>
